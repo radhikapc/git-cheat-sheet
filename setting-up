@@ -1,0 +1,38 @@
+# Playing around with Git
+
+## Creating a GitHub account
+
+The first step to using git is to create a github account. Visit https://github.com/join and complete the instructions.
+
+## Setting up ssh keys
+
+The advantage of using SSH keys is that you can connect to GitHub without supplying your username or password at each time you make a checkin.
+Check whether you have existing SSH keys:
+
+  `$ cd ~/.ssh` 
+Usually all your SSH keys are stored at.ssh directory. If you see `id_rsa` and `id_rsa.pub`, those are your private and public ssh keys. See the instruction to see how to do so: https://help.github.com/articles/checking-for-existing-ssh-keys/
+You can choose to create fresh one to use with your GitHub account. To do so, follow the instructions at https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+You may check your ssh connection works fine with GitHub: https://help.github.com/articles/testing-your-ssh-connection/
+
+## Forking a repository
+
+Identify the repository you would want to contribute. A fork is nothing but a copy of that repository existing in your account. Complete instruction is given here: https://help.github.com/articles/fork-a-repo/
+
+## Cloning a repository
+
+A clone is nothing but a local copy of the repository in your local machine. For instructions to clone, see https://help.github.com/articles/cloning-a-repository/.
+
+## Working with a remote repository
+
+Remote respositories hosted on GitHub and you view them by using Internet. Your local machine does not know yet where are the remote 
+To see the remote repositories you have configured run:
+
+`$ git remote -v`
+Because you have cloned your fork, you see origin. Origin is the term used to refer to the local copy of your fork. You push your changes to origin.
+You pull mostly from the repository that you made a fork. That is the upstream repository where contributors submit their work to. To get the latest codebase, daily you fetch the changes.
+To add that repository do:
+`$git remote add upstream <name of the repository>`
+
+Now you can refer to the main repository as upstream. 
+
+
